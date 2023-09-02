@@ -1,0 +1,74 @@
+/* App.module.css */
+
+body {
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Añadido para evitar superposición con barra fija */
+}
+
+
+.content {
+  margin-top: 60px; /* Ajusta este valor según el tamaño de tu barra de navegación */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Estilos para la barra de navegación fija */
+.Navbar {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 60px; /* Ajusta la altura según tu diseño */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  z-index: 1000; 
+  background-color: #2E2259;/* Asegura que la barra esté en el frente */
+}
+
+/* Resto de los estilos */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

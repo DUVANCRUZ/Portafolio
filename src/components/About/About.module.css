@@ -1,0 +1,41 @@
+/* About.module.css */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Elimina la animación y propiedades relacionadas */
+  .typewriter {
+    font-size: 24px;
+    margin-right: 20px; /* Espacio entre el icono y el texto */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Cambio de icono y ajuste del margen */
+  .icon {
+    font-size: 36px;
+    margin-right: 10px;
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .image {
+    max-width: 500px;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+  }
+  

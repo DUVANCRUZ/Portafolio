@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem; /* Margen superior para el título */
+}
+
+.technologiesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 1rem 0; /* Margen entre las filas */
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.icon {
+  font-size: 3rem;
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.iconHovered {
+  font-size: 4rem;
+  color: #ff6600; /* Cambiar a color de hover deseado */
+}
+
+.techName {
+  margin-top: 0.5rem;
+  text-align: center;
+}

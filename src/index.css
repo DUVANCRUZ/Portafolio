@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./assets/Images/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw; /* Cambiado a 100% */ /* Asegura que el cuerpo ocupe al menos el 100% de la ventana */
+  display: flex;
+  flex-direction: column; /* Alinear hijos en columna */
+  justify-content: center; /* Alinear hijos en el centro vertical */
+  align-items: center; /* Alinear hijos en el centro horizontal */
+  color: white;
 }
 
 code {
