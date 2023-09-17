@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "numero": "proyecto1",
+      "name": "Food App",
+      "githubLink": "https://github.com/tuusuario/proyecto1",
+      "deployLink": "https://tu-sitio.com/proyecto1",
+      "images": [
+        "a.jpg",
+        "b.jpg",
+        "c.jpg",
+        "d.jpg",
+        "e.jpg",
+        "f.jpg"
+      ],
+      "technologies": [
+        "JavaScript",
+        "Node.js",
+        "React",
+        "Redux",
+        "CSS",
+        "HTML",
+        "PostgreSQL",
+        "Sequelize"
+         
+      ],
+      "description": "During my participation in the Bootcamp, I successfully executed a challenging individual project focused on leveraging an API to gather food data. My primary objective was to create a highly interactive and user-friendly application with robust features, including advanced food filtering and search options by name, as well as the ability to combine multiple filters and facilitate the creation of new recipes. To achieve this, I employed cutting-edge technologies for both the backend, such as Express.js and Sequelize for efficient data handling, and the frontend, using React and React Redux to ensure a modern and seamless user interface."
+
+
+    },
+    {
+      "id": 2,
+      "numero": "proyecto2",
+      "name": "Naruto Web",
+      "githubLink": "https://github.com/tuusuario/proyecto2",
+      "deployLink": "https://tu-sitio.com/proyecto2",
+      "images": [
+        "a.jpg",
+        "b.jpg",
+        "c.jpg",
+        "d.jpg",
+        "e.jpg",
+        "f.jpg"
+      ], 
+      "technologies": [
+        "Angular",  
+        "Python", 
+        "MongoDB",
+        "Flask",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "description": "I designed this website for Naruto anime enthusiasts. The app incorporates data from an API with over 1500 Naruto characters. Users can search for their favorite character in the search bar or filter characters by clan, rank, gender, and sort them alphabetically. Additionally, they can create new characters and add both existing and custom-created characters to their favorites based on their preferences."
+    },
+    {
+      "id": 3,
+      "numero": "proyecto3",
+      "name": "Celiac Cafeteria",
+      "githubLink": "https://github.com/tuusuario/proyecto3",
+      "deployLink": "https://tu-sitio.com/proyecto3",
+      "images": [
+        "a.jpg",
+        "b.jpg",
+        "c.jpg",
+        "d.jpg",
+        "e.jpg",
+        "f.jpg"
+      ], 
+      "technologies": [
+        "JavaScript",
+        "Node.js",
+        "React",
+        "Redux",
+        "CSS",
+        "HTML",
+        "PostgreSQL",
+        "Sequelize",    
+        "Firebase",
+        "Material UI"
+         
+      ],
+      "description": "During my Full Stack Web Developer training at Henry Bootcamp, I collaborated on a group project focused on crafting a functional and innovative website for a celiac and vegan café. Our web application boasted key features such as user registration, a product menu with comprehensive filtering capabilities based on categories, prices, and product types, as well as an integrated shopping system complete with a cart and seamless payment processing. Additionally, we implemented an efficient administrative panel, enabling administrators to easily oversee and manage both products and users. This project not only underscored our technical prowess but also highlighted our ability to work harmoniously as a team, delivering a feature-rich solution tailored to the café's unique needs."
+
+    }
+  ]
+

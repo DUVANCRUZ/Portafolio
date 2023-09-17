@@ -1,27 +1,19 @@
-// App.js
 import React from 'react';
-import Navbar from './components/NavBar/NavBar';
-import About from './components/About/About';
-import Technologies from './components/Technologies/Technologies';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
-import Welcome from './components/Welcome/Welcome';
-import styles from './App.module.css'; // Importa tus estilos aquí
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Usa BrowserRouter o HashRouter según tu preferencia
+import Home from './components/Home/Home';
+import styles from './App.module.css';
+import Detail from './components/Detail/Detail';
 
 function App() {
   return (
-    <div className={styles.container}>
-        <div className={styles.Navbar}>
-          <Navbar />  
-        </div>
-      <div className={styles.content}>
-        <Welcome />
-        <About/>
-        <Technologies />
-        <Projects />
-        <Contact />
-      </div>ss
-    </div>
+    <Router> {/* Envuelve tu aplicación con Router */}
+      <div className={styles.container}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:id" element={<Detail />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

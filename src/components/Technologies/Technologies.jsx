@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTrail, animated, config } from 'react-spring';
 import styles from './Technologies.module.css';
 import {
@@ -20,7 +20,7 @@ import {
 import { SiRedux } from 'react-icons/si';
 import { AiFillDatabase } from 'react-icons/ai';
 
-const technologies = [
+const allTechnologies = [
   { name: 'JavaScript', icon: DiJavascript1 },
   { name: 'Python', icon: FaPython },
   { name: 'Node.js', icon: FaNodeJs },
@@ -37,10 +37,19 @@ const technologies = [
   { name: 'Flask', icon: FaFlask },
 ];
 
-const technologiesPerRow = 7; // Cambiar para mostrar 7 tecnologías por fila
+const technologiesPerRow = 7;
 
-function Technologies() {
-  const [hoveredTech, setHoveredTech] = React.useState(null);
+function Technologies({ technologyNames }) {
+  const [hoveredTech, setHoveredTech] = useState(null);
+  const [technologies, setTechnologies] = useState([]);
+
+  useEffect(() => {
+    // Filtrar las tecnologías por los nombres recibidos por props
+    const filteredTechnologies = allTechnologies.filter((tech) =>
+      technologyNames.includes(tech.name)
+    );
+    setTechnologies(filteredTechnologies);
+  }, [technologyNames]);
 
   const trailProps = useTrail(technologies.length, {
     from: { opacity: 0, transform: 'scale(0.8)' },
@@ -55,7 +64,7 @@ function Technologies() {
   );
 
   return (
-    <div id="technologies" className={styles.container}>
+    <div className={styles.container}>
       <h1 className={styles.heading}>Tecnologías</h1>
       <div className={styles.technologiesContainer}>
         <div className={styles.row}>

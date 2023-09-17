@@ -1,0 +1,95 @@
+.container {
+  padding: 20px;
+  padding-top: 40px;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px; /* Agrega un espacio entre los proyectos */
+}
+
+.projectContainer {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10%;
+  margin-bottom: 20px; /* Agrega espacio entre los contenedores de proyecto */
+}
+
+.projectContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra verticalmente el contenido */
+}
+
+.projectButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.projectContainer:hover .projectContent img {
+  filter: brightness(30%); /* Aplicar el filtro al hacer hover */
+}
+
+.projectContainer:hover {
+  width: 440px;
+}
+
+.projectContainer:hover .projectButtons {
+  opacity: 1;
+}
+
+.projectButton {
+  background-color: #2E2259;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  width: 200px;
+  height: 20px;
+}
+
+.projectButton:hover {
+  background-color: #FFFFFF; /* Cambiamos el fondo en hover */
+  color: #2E2259;
+  width: 220px;
+  height: 40px;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
