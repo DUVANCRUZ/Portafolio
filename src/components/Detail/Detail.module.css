@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .left-side {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .right-side {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .project-details {
+    margin-top: 20px;
+  }
+  
+  .description {
+    display: none;
+  }
+  
+  .show-description-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .show-description-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  button {
+    background: linear-gradient(to bottom, #6f42c1, transparent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out; /* Agregado efecto de transición */
+  }
+  
+  button:hover {
+    background: #542b8a; /* Cambia el fondo al hacer hover */
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar íconos */
+    margin-top: 20px;
+  }
+  
+  .iconLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff; /* Color inicial blanco */
+    margin-bottom: 10px;
+  }
+  
+  .iconLink:hover {
+    color: #ff6600; /* Color naranja al hacer hover */
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+  

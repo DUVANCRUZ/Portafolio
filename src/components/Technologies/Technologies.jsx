@@ -37,11 +37,13 @@ const allTechnologies = [
   { name: 'Flask', icon: FaFlask },
 ];
 
-const technologiesPerRow = 7;
+
 
 function Technologies({ technologyNames }) {
   const [hoveredTech, setHoveredTech] = useState(null);
   const [technologies, setTechnologies] = useState([]);
+
+  const technologiesPerRow = technologyNames.length/2
 
   useEffect(() => {
     // Filtrar las tecnologías por los nombres recibidos por props
@@ -65,7 +67,7 @@ function Technologies({ technologyNames }) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Tecnologías</h1>
+    
       <div className={styles.technologiesContainer}>
         <div className={styles.row}>
           {technologiesTopRow.map((tech, index) => (

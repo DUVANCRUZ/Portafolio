@@ -5,11 +5,11 @@ function Navbar() {
   return (
     <nav className={styles.container}>
       <ul>
-        <li><a href="#welcome">Inicio</a></li>
-        <li><a href="#about">Acerca de Mí</a></li>
-        <li><a href="#technologies">Tecnologías</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contáctame</a></li>
+        <li><a href="#welcome">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
       </ul>
     </nav>
   );

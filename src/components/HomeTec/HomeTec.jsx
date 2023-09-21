@@ -22,7 +22,7 @@ function HomeTec() {
   return (
     <div id="technologies"  className={styles.container}>
         
-        
+        <h1 className={styles.heading}>Technologies</h1>
         <Technologies technologyNames={technologies} />
         
     </div>

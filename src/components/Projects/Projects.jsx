@@ -19,25 +19,27 @@ import img16 from '../../assets/Images/proyecto3/d.jpg';
 import img17 from '../../assets/Images/proyecto3/e.jpg';
 import img18 from '../../assets/Images/proyecto3/f.jpg';
 import styles from './Projects.module.css';
+import { Link } from 'react-router-dom'
 
 const projectsData = [
   {
     images: [img1, img2, img3, img4, img5, img6],
     name: 'Food App',
-    githubLink: 'https://github.com/tuusuario/proyecto1',
-    deployLink: 'https://tu-sitio.com/proyecto1',
+    githubLink: "https://github.com/DUVANCRUZ/pifOOD/",
+    deployLink: "https://front-end-food.onrender.com",
+
   },
   {
     images: [img7, img8, img9, img10, img11, img12],
     name: 'Naruto Web',
-    githubLink: 'https://github.com/tuusuario/proyecto2',
-    deployLink: 'https://tu-sitio.com/proyecto2',
+    githubLink: "https://github.com/DUVANCRUZ/NarutoWeb",
+    deployLink: "https://narutoweb.netlify.app/",
   },
   {
     images: [img13, img14, img15, img16, img17, img18],
     name: 'CELIAC CAFETERIA',
-    githubLink: 'https://github.com/tuusuario/proyecto3',
-    deployLink: 'https://tu-sitio.com/proyecto3',
+    githubLink: "https://github.com/DUVANCRUZ/Cafeteria",
+    deployLink: "https://cafeteria-steel.vercel.app/",
   },
 ];
 
@@ -70,7 +72,9 @@ function Projects() {
                 >
                   GitHub
                 </a>
-                <a className={styles.projectButton}>View Details</a>
+                <Link to={`/${index + 1}`} className={styles.projectButton}>
+                  View Details
+                </Link>
               </div>
             </div>
           </div>

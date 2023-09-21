@@ -3,8 +3,8 @@
       "id": 1,
       "numero": "proyecto1",
       "name": "Food App",
-      "githubLink": "https://github.com/tuusuario/proyecto1",
-      "deployLink": "https://tu-sitio.com/proyecto1",
+      "githubLink": "https://github.com/DUVANCRUZ/pifOOD/",
+      "deployLink": "https://front-end-food.onrender.com",
       "images": [
         "a.jpg",
         "b.jpg",
@@ -32,8 +32,8 @@
       "id": 2,
       "numero": "proyecto2",
       "name": "Naruto Web",
-      "githubLink": "https://github.com/tuusuario/proyecto2",
-      "deployLink": "https://tu-sitio.com/proyecto2",
+      "githubLink": "https://github.com/DUVANCRUZ/NarutoWeb",
+      "deployLink": "https://narutoweb.netlify.app/",
       "images": [
         "a.jpg",
         "b.jpg",
@@ -57,8 +57,8 @@
       "id": 3,
       "numero": "proyecto3",
       "name": "Celiac Cafeteria",
-      "githubLink": "https://github.com/tuusuario/proyecto3",
-      "deployLink": "https://tu-sitio.com/proyecto3",
+      "githubLink": "https://github.com/DUVANCRUZ/Cafeteria",
+      "deployLink": "https://cafeteria-steel.vercel.app/",
       "images": [
         "a.jpg",
         "b.jpg",

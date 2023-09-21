@@ -1,0 +1,129 @@
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100vw;
+    height: 100vh; /* Ocupar todo el alto de la pantalla */
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 0 30px; /* Aumenta la separación entre los iconos */
+  }
+  
+  .icon {
+    font-size: 3rem;
+    color: white; /* Inicialmente blanco */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .iconWrapper:hover .icon {
+    color: #ff6600; /* Color de hover deseado (anaranjado) */
+    font-size: 4rem; /* Aumenta el tamaño al hacer hover */
+  }
+  
+  .iconWrapper p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .cvIcon:hover .icon {
+    color: #ff6600; /* Color de hover deseado (anaranjado) */
+    font-size: 4rem; /* Aumenta el tamaño al hacer hover */
+  }
+  
+  .htmlViewer {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    background: linear-gradient(to bottom, #6f42c1, transparent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out; /* Agregado efecto de transición */
+  }
+  
+  button:hover {
+    background: #542b8a; /* Cambia el fondo al hacer hover */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    width: 40%; /* Cambiado al 100% para que los inputs sean más largos horizontalmente */
+  }s
+  
+  label {
+    font-size: 1.2rem;
+  }
+  
+  input,
+  textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    background: linear-gradient(to bottom, #6f42c1, transparent);
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out; /* Agregado efecto de transición */
+  }
+  
+  input:hover,
+  textarea:hover {
+    background: #542b8a; /* Cambia el fondo al hacer hover */
+  }
+  
+  .messageInput {
+    width: 100%;
+    height: 100px; /* Aumentado el tamaño verticalmente según tus preferencias */
+    resize: none; /* Evita la redimensión manual */
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  button:hover, {
+    background: #542b8a; /* Cambia el fondo al hacer hover */
+  }
+  /* Agregar cualquier estilo adicional que necesites */
+  

@@ -1,6 +1,7 @@
-import React from "react";
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from "react";
 import styles from "./Detail.module.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import projects from "../../projects.json";
 import Carousel from "../Carousel/Carousel";
 import Technologies from "../Technologies/Technologies";
@@ -8,6 +9,8 @@ import Technologies from "../Technologies/Technologies";
 export default function Detail() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === parseInt(id, 10));
+  const [showDescription, setShowDescription] = useState(false);
+  const navigate = useNavigate();
 
   if (!project) {
     return <div>No se encontró el proyecto.</div>;
@@ -18,24 +21,50 @@ export default function Detail() {
     let ruta = require(`../../assets/Images/${project.numero}/${imageName}`);
     images.push(ruta);
   });
-  console.log(images);
 
   return (
     <div className={styles.container}>
-      <h1>{project.name}</h1>
-      <div>
+      <div className={styles["left-side"]}>
+        <h1 className={styles.title}>{project.name}</h1>
+        <div className={styles["project-details"]}>
+          <Technologies technologyNames={project.technologies} />
+          <h2>Description</h2>
+          {showDescription ? (
+            <p>{project.description}</p>
+          ) : (
+            <p className={styles.hidden}>{project.description}</p>
+          )}
+          <button
+            className={styles["show-description-button"]}
+            onClick={() => setShowDescription(!showDescription)}
+          >
+            {showDescription ? "Hide Description" : "Show Description"}
+          </button>
+          <div className={styles.links}>
+            <div className={styles.iconLink}>
+              <a href={project.githubLink}>
+                <FaGithub className={styles.icon} />
+                <span>GitHub</span>
+              </a>
+            </div>
+            <div className={styles.iconLink}>
+              <a href={project.deployLink}>
+                <FaExternalLinkAlt className={styles.icon} />
+                <span>Deploy</span>
+              </a>
+            </div>
+          </div>
+          <button
+            className={styles["go-back-button"]}
+            onClick={() => navigate("/")}
+          >
+            Go to Back
+          </button>
+        </div>
+      </div>
+      <div className={styles["right-side"]}>
         <Carousel images={images} />
       </div>
-      <Technologies technologyNames={project.technologies} />
-      <h1>Description</h1>
-      <p>{project.description}</p>
-      {/* Pasa las tecnologías como props al componente Technologies */}
-      <p>
-        GitHub: <a href={project.githubLink}>{project.githubLink}</a>
-      </p>
-      <p>
-        Deploy: <a href={project.deployLink}>{project.deployLink}</a>
-      </p>
     </div>
   );
 }
