@@ -122,8 +122,21 @@
     margin-top: 20px;
   }
   
-  button:hover, {
+  button:hover {
     background: #542b8a; /* Cambia el fondo al hacer hover */
   }
   /* Agregar cualquier estilo adicional que necesites */
   
+
+  @media (max-width: 768px) {
+    input{
+      width: 80vw;/* Cambia el fondo al hacer hover */
+    }
+  
+    .messageInput{
+      width: 80vw;/* Cambia el fondo al hacer hover */
+    }
+  
+    
+    
+  }

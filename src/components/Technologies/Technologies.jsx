@@ -37,13 +37,12 @@ const allTechnologies = [
   { name: 'Flask', icon: FaFlask },
 ];
 
-
-
 function Technologies({ technologyNames }) {
   const [hoveredTech, setHoveredTech] = useState(null);
   const [technologies, setTechnologies] = useState([]);
-
-  const technologiesPerRow = technologyNames.length/2
+  const [technologiesPerRow, setTechnologiesPerRow] = useState(
+    window.innerWidth < 768 ? Math.ceil(technologyNames.length / 4) : Math.ceil(technologyNames.length / 2)
+  );
 
   useEffect(() => {
     // Filtrar las tecnologías por los nombres recibidos por props
@@ -53,60 +52,60 @@ function Technologies({ technologyNames }) {
     setTechnologies(filteredTechnologies);
   }, [technologyNames]);
 
+  useEffect(() => {
+    // Función que se ejecutará cuando cambie el tamaño de la pantalla
+    function handleResize() {
+      setTechnologiesPerRow(
+        window.innerWidth < 768 ? Math.ceil(technologyNames.length / 4) : Math.ceil(technologyNames.length / 2)
+      );
+    }
+
+    // Agregar el event listener para escuchar cambios en el tamaño de la pantalla
+    window.addEventListener('resize', handleResize);
+
+    // Limpia el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [technologyNames]);
+
   const trailProps = useTrail(technologies.length, {
     from: { opacity: 0, transform: 'scale(0.8)' },
     to: { opacity: 1, transform: 'scale(1)' },
     config: config.wobbly,
   });
 
-  const technologiesTopRow = technologies.slice(0, technologiesPerRow);
-  const technologiesBottomRow = technologies.slice(
-    technologiesPerRow,
-    technologies.length
-  );
+  // Divide las tecnologías en las filas correctas
+  const rows = [];
+  for (let i = 0; i < technologies.length; i += technologiesPerRow) {
+    const rowTechnologies = technologies.slice(i, i + technologiesPerRow);
+    rows.push(rowTechnologies);
+  }
 
   return (
     <div className={styles.container}>
-    
       <div className={styles.technologiesContainer}>
-        <div className={styles.row}>
-          {technologiesTopRow.map((tech, index) => (
-            <animated.div
-              key={tech.name}
-              className={styles.technology}
-              onMouseEnter={() => setHoveredTech(tech.name)}
-              onMouseLeave={() => setHoveredTech(null)}
-              style={{
-                ...trailProps[index],
-                zIndex: hoveredTech === tech.name ? 1 : 0,
-              }}
-            >
-              {React.createElement(tech.icon, {
-                className: hoveredTech === tech.name ? styles.iconHovered : styles.icon,
-              })}
-              <div className={styles.techName}>{tech.name}</div>
-            </animated.div>
-          ))}
-        </div>
-        <div className={styles.row}>
-          {technologiesBottomRow.map((tech, index) => (
-            <animated.div
-              key={tech.name}
-              className={styles.technology}
-              onMouseEnter={() => setHoveredTech(tech.name)}
-              onMouseLeave={() => setHoveredTech(null)}
-              style={{
-                ...trailProps[index + technologiesPerRow],
-                zIndex: hoveredTech === tech.name ? 1 : 0,
-              }}
-            >
-              {React.createElement(tech.icon, {
-                className: hoveredTech === tech.name ? styles.iconHovered : styles.icon,
-              })}
-              <div className={styles.techName}>{tech.name}</div>
-            </animated.div>
-          ))}
-        </div>
+        {rows.map((row, rowIndex) => (
+          <div key={rowIndex} className={styles.row}>
+            {row.map((tech, index) => (
+              <animated.div
+                key={tech.name}
+                className={styles.technology}
+                onMouseEnter={() => setHoveredTech(tech.name)}
+                onMouseLeave={() => setHoveredTech(null)}
+                style={{
+                  ...trailProps[index],
+                  zIndex: hoveredTech === tech.name ? 1 : 0,
+                }}
+              >
+                {React.createElement(tech.icon, {
+                  className: hoveredTech === tech.name ? styles.iconHovered : styles.icon,
+                })}
+                <div className={styles.techName}>{tech.name}</div>
+              </animated.div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

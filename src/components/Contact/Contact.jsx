@@ -78,9 +78,11 @@ function Contact() {
           <p>LinkedIn</p>
         </div>
         <div className={styles.iconWrapper}>
+          <a href="https://github.com/DUVANCRUZ" >
           <animated.div style={fadeIn} className={styles.icon}>
             <FaGithub />
-          </animated.div>
+          </animated.div>  
+          </a>
           <p>GitHub</p>
         </div>
       </div>

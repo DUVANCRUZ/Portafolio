@@ -1,41 +1,72 @@
-/* About.module.css */
 
+/* Estilos CSS */
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typewriter {
+  font-size: 24px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.image {
+  max-width: 500px;
+  margin-right: 20px;
+}
+
+/* Media query para pantallas pequeñas (por ejemplo, pantallas con un ancho máximo de 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 20px; 
+    height: auto;/* Agrega un margen superior para separar el componente del superior */
   }
-  
+
   .content {
-    display: flex;
-    align-items: center;
+    height: 100vh;
+    flex-direction: column-reverse; /* Mantiene la dirección de columna inversa para mostrar primero el texto en pantallas pequeñas */
+    text-align: center;
+    align-items: center; /* Centra verticalmente el contenido */
+    margin-top: 20px; 
+    margin-right:0px;
     justify-content: center;
+    align-items: center;/* Agrega un margen superior para separarlo del contenido superior */
   }
-  
-  /* Elimina la animación y propiedades relacionadas */
   .typewriter {
-    font-size: 24px;
-    margin-right: 20px; /* Espacio entre el icono y el texto */
-    display: flex;
-    align-items: center;
+    margin-right: 0px;
+    margin-bottom: 20px;
   }
-  
-  /* Cambio de icono y ajuste del margen */
-  .icon {
-    font-size: 36px;
-    margin-right: 10px;
-  }
-  
-  .textContainer {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
-  
   .image {
-    max-width: 500px;
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    max-width: 250px;
+    margin-right: 0;
+    margin-bottom: 20px;
+
   }
-  
+
+  .textContainer {
+    width: 80%;
+    
+  }
+}

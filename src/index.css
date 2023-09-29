@@ -6,17 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./assets/Images/fondo.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 100vw; /* Cambiado a 100% */ /* Asegura que el cuerpo ocupe al menos el 100% de la ventana */
+  background-size: cover; /* Ajustar imagen de fondo al tamaño del contenedor */
+  background-attachment: fixed; /* Fijar la imagen de fondo para que no se desplace */
+  width: 100vw; /* Asegura que el cuerpo ocupe al menos el 100% de la ventana */
   display: flex;
   flex-direction: column; /* Alinear hijos en columna */
   justify-content: center; /* Alinear hijos en el centro vertical */
   align-items: center; /* Alinear hijos en el centro horizontal */
   color: white;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

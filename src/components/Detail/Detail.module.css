@@ -14,6 +14,7 @@
   .right-side {
     flex: 1;
     margin-left: 20px;
+    align-self: center;
   }
   
   .title {
@@ -83,3 +84,16 @@
     margin-right: 5px;
   }
   
+  @media (max-width: 768px) {
+    .container{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  
+    .left-side{
+      width: 100vw
+    }
+    
+    
+  }

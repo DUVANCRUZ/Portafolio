@@ -14,7 +14,7 @@ function Welcome() {
           </h2>
           <p className={styles.typewriter}>Web Developer</p>
         </div>
-        <img src={photo} alt="My Image" className={styles.image} /> 
+        <img src={photo} alt="My Image" className={styles.image} />
       </div>
     </div>
   );
